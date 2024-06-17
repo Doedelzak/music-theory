@@ -1,0 +1,107 @@
+﻿@using TheorieMusique.Helpers
+@model LayoutViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theorie de la musique - Corn</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TheorieMusique.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header></header>
+    
+    <div class="sidebar">
+        <div class="sidebar-content">
+            @Html.Partial("BarContent")
+        </div>
+    </div>
+
+    <button id="toggle-sommaire" class="btn btn-outline-light" onclick="SlideTopBar()">☰</button>
+
+    <div id="page" class="content">
+        <div id="topbar" style="display:none;">
+            <div class="topbar-content">
+                @Html.Partial("BarContent")
+            </div>
+        </div>
+
+        <div id="page-content">
+            @RenderBody()
+        </div>
+
+        <button id="precedent" class="btn btn-outline-light">Page précédente</button>
+        <button id="suivant" class="btn btn-outline-light text-left">Page suivante</button>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        @Model.Lexique.ToJs("lexique");
+
+        var currentPage = -1;
+
+        $(document).ready(function() {
+            $(".menu").on("click", function () {
+                $(this).next().slideToggle();
+            });
+
+            $(".menu-item").on("click", function () {
+                currentPage = $(this).data("page");
+                $(".clicked").removeClass("clicked");
+                $.ajax({
+                    url: "@Url.Action("Page")",
+                    type: 'GET',
+                    data: { page: $(this).attr("id") }
+                }).done(function (result) {
+                    $("#topbar").slideUp();
+                    $(lexique).each(function () {
+                        let nameDescription = this.toString();
+                        let description = nameDescription.split(";")[1];
+
+                        let originalName = nameDescription.split(";")[0];
+                        let names = [];
+                        names.push(" " + originalName, "'" + originalName, '"' + originalName);
+                        names.forEach((name) => {
+                            result = result.replace(new RegExp(name, "g"), '<span class="tooltip-r text-blue" data-toggle="tooltip" data-placement="left" title="' + description + '">' + name + '</span>');
+                        });
+                    });
+                    result = result.replace(new RegExp("¤", "g"), "");
+                    result = result.replace(new RegExp("</span>s", "g"), "s</span>");
+                    $("#page-content").html(result);
+                    $('html, body').animate({
+                        scrollTop: $('#page').offset().top - 20,
+                        easing: "linear"
+                    }, 1);
+                    $(".menu-item[data-page='" + (currentPage) + "']").addClass("clicked");
+                    $("#precedent").trigger("blur");
+                    $("#suivant").trigger("blur");
+                    $('.tooltip-r').tooltip();
+                });
+            });
+
+            $("#toggle-sommaire").on("click", function () {
+                $("#topbar").slideToggle();
+                $(this).addClass("clicked");
+            });
+
+            $("#precedent").on("click", function() {
+                if (currentPage > -1)
+                    $(".menu-item[data-page='" + (currentPage - 1) + "']").click();
+            });
+
+            $("#suivant").on("click", function () {
+                $(".menu-item[data-page='" + (currentPage + 1) + "']").click();
+            });
+
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

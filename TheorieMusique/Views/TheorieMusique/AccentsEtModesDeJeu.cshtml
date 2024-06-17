@@ -1,0 +1,206 @@
+﻿@{
+    Layout = null;
+}
+
+<h1 class="display-4 text-center">¤Accents et ¤modes de jeu</h1>
+
+
+
+<p>Le rythme est indissociable de l'<strong>intensité</strong> : en variant l'intensité de ses différentes 
+    occurrences, on obtient des résultats qui n'ont rien à voir les uns avec les autres. Une intensité 
+    momentanément supérieure aux autres se nomme un <strong>accent</strong>. Dans le protocole MIDI, et donc 
+    toute l'informatique musicale, l'intensité se nomme la <strong>vélocité</strong>. Un peu bizarre car, en 
+    soi, le mot d'origine désigne plutôt une notion de rapidité, mais bon, c'est comme ça. J'utiliserai donc 
+    le terme de <strong>vélocité</strong>.</p>
+
+<p>La vélocité augmente nécessairement le volume. Mais elle est différente d'une automation de volume. En 
+    plus de changer le volume, <strong>la vélocité change le timbre de l'instrument</strong>. C'est vrai 
+    autant pour les instruments électroniques que pour les instruments acoustiques. Chaque fois que possible, 
+    dans un DAW, préférez les variations de vélocité aux variations de volume. Le son sera plus vivant.</p>
+<p>Prenons ce cas de doubles-croches(16) jouées rapidement les unes après les autres, dans deux mesures 4/4 :</p>
+
+<img src="~/img/0141_rythme_accents_modes_de_jeu_1.png" />
+
+<audio controls>
+    <source src="~/audio/0123_rythme_accents_modes_de_jeu_1.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0123_rythme_accents_modes_de_jeu_1.mid">Télécharger le MIDI</a>
+</div>
+
+
+<p>Maintenant, écoutons les mêmes double-croches(16) jouées les unes après les autres, mais avec un accent sur 
+    chacun des 4 temps de la mesure :</p>
+
+<img src="~/img/0142_rythme_accents_modes_de_jeu_2.png" />
+
+<audio controls>
+    <source src="~/audio/0124_rythme_accents_modes_de_jeu_2.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0124_rythme_accents_modes_de_jeu_2.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Les temps mis en valeur changent la perception d'une succession pourtant identique de double-croches(16).</p>
+
+<p>Maintenant, écoutons les mêmes double-croches(16) jouées les unes après les autres, mais avec un accent 
+    toutes les 3 double-croches(16) :</p>
+
+<img src="~/img/0143_rythme_accents_modes_de_jeu_3.png" />
+
+<audio controls>
+    <source src="~/audio/0125_rythme_accents_modes_de_jeu_3.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0125_rythme_accents_modes_de_jeu_3.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Le résultat est très différent, on a même l'impression d'entendre une variation du motif précédent. 
+    Pourtant, ce sont bien les mêmes notes, avec des accents. Ici on brouille la mesure 4/4 en simulant du 
+    ternaire, grâce aux regroupements par 3. C'est comme si la mesure 4/4 était à présent découpée en trois 
+    temps inégaux : noire pointée(4.) + noire pointée(4.) + noire(4)</p>
+
+<p>Les accents peuvent être plus ou moins marqués, et on peut aussi faire l'inverse et rendre une 
+    double-croche(16) plus faible que les autres. Voici les mêmes deux mesures avec de grosses variations de 
+    vélocité :</p>
+
+<img src="~/img/0145_rythme_accents_modes_de_jeu_5.png" />
+
+<audio controls>
+    <source src="~/audio/0126_rythme_accents_modes_de_jeu_4.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0126_rythme_accents_modes_de_jeu_4.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Il existe aussi des mouvements plus continus de variation de vélocité. Les accents sont des événements 
+    isolés, mais plusieurs sons peuvent suivre une seule ligne d'évolution progressive.</p>
+
+<p>Le <strong>crescendo</strong> désigne une vélocité allant du faible vers le fort :</p>
+
+<audio controls>
+    <source src="~/audio/0127_rythme_accents_modes_de_jeu_5.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0127_rythme_accents_modes_de_jeu_5.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Le <strong>decrescendo</strong> désigne l'inverse :</p>
+
+<audio controls>
+    <source src="~/audio/0128_rythme_accents_modes_de_jeu_6.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0128_rythme_accents_modes_de_jeu_6.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Petit aparté : pour ces deux extraits de crescendo et de decrescendo, j'ai bien modifié la vélocité et 
+    non le volume du piano. Notez comme le timbre des touches change avec la vélocité, ce qui ne serait pas 
+    le cas avec une automation de volume. Le plus possible, privilégiez des variations de vélocité plutôt 
+    que de volume quand vous utilisez des VSTs. Vous serez étonnés de la richesse gagnée.</p>
+
+<br />
+
+<p>
+    Un <strong>¤mode de jeu</strong>, c'est une manière de produire un son avec un instrument. C'est une notion
+    directement liée à la pratique instrumentale. Les ¤modes de jeu changent complètement le ressenti d'un
+    même motif rythmique (et, le cas échéant, d'une même mélodie). Chaque instrument possède son panel de 
+    ¤modes de jeu. Comme l'immense majorité du matériel de synthèse et de la MAO est centré autour du contrôle
+    via un clavier (ou des pads, qui fonctionnent de manière quasi identique), et que cette théorie s'axe 
+    sur la musique produite de cette manière plutôt que sur la musique purement instrumentale, je vais parler 
+    des ¤modes de jeu sur un clavier. C'est un peu dommage, au fond, car le piano est un des instruments qui
+    permet le moins de modes de jeu différents. Les ¤modes de jeu d'un instrument à cordes, par exemple, sont
+    infinis. Mais, sauf matériel exceptionnel, on ne contrôle pas les synthés, les VSTs ou le matériel MIDI 
+    avec des cordes.</p>
+
+<p>Les ¤modes de jeu changent le ressenti d'un même motif rythmique :</p>
+
+<p>Exemple d'une mélodie sans variation de ¤modes de jeu :</p>
+
+<img src="~/img/0146_rythme_accents_modes_de_jeu_6.png" />
+
+<audio controls>
+    <source src="~/audio/0130_rythme_accents_modes_de_jeu_7.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0129_rythme_accents_modes_de_jeu_7.mid">Télécharger le MIDI</a>
+</div>
+
+<p>La même mélodie avec plusieurs variations de ¤modes de jeu :</p>
+
+<img src="~/img/0147_rythme_accents_modes_de_jeu_7.png" />
+
+<audio controls>
+    <source src="~/audio/0131_rythme_accents_modes_de_jeu_8.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0130_rythme_accents_modes_de_jeu_8.mid">Télécharger le MIDI</a>
+</div>
+
+<p>
+    Le rythme et la mélodie de ces extraits sont strictement les mêmes. La différence est dans les ¤modes de
+    jeu.</p>
+
+<p>
+    Les ¤modes de jeu pourraient faire l'objet d'un chapitre entier. Je vais en lister brièvement quelques-uns
+    ici, car ils influent beaucoup sur la perception d'un motif rythmique. </p>
+<br />
+
+<h4>Les notes liées</h4>
+
+<img src="~/img/0149_rythme_accents_modes_de_jeu_9.png" />
+
+<audio controls>
+    <source src="~/audio/0132_rythme_accents_modes_de_jeu_9.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0131_rythme_accents_modes_de_jeu_9.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Elles marquent peu les divisions de la mesure, et permettent une mélodie plus veloutée, bref, liée. En 
+    jouant sur un clavier, on obtient les notes liées ne laissant aucun silence entre deux notes, donc en 
+    gardant appuyé une note tant que la suivante n'est pas jouée. Sur le pianoroll, on remarque qu'en réalité,
+    chaque note dure un instant très léger en superposition de la suivante, créant un tuilage que l'oreille 
+    perçoit comme une transition fluide.</p>
+<br />
+
+<h4>Les notes staccato</h4>
+
+<img src="~/img/0150_rythme_accents_modes_de_jeu_10.png" />
+
+<audio controls>
+    <source src="~/audio/0133_rythme_accents_modes_de_jeu_10.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0132_rythme_accents_modes_de_jeu_10.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Les notes staccato marquent fortement les divisions de la mesure. Elles ont plus de lourdeur, qui peut se 
+    traduire soit par une expression puissante, soit par un certain fatalisme (Beethoven, tout ça...). Sur 
+    le clavier, elles s'obtiennent en enfonçant pleinement les touches et en laissant un très court silence 
+    entre chaque note. </p>
+
+<h4>Les notes piquées (pizzicato)</h4>
+
+<img src="~/img/0151_rythme_accents_modes_de_jeu_11.png" />
+
+<audio controls>
+    <source src="~/audio/0134_rythme_accents_modes_de_jeu_11.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0133_rythme_accents_modes_de_jeu_11.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Les notes piquées marquent aussi clairement les divisions de la mesure, mais avec légèreté. Très 
+    sporadiques, elles rendent la mélodie moins perceptible, comme si elle était sous-entendue, et c'est le motif rythmique qui prend le dessus. La meilleure manière d'obtenir des notes piquées sur un clavier est de lever rapidement la main à peine la note jouée. A partir d'une certaine vitesse, on ne peut plus lever la main pour chaque note. Il faut donc reproduire le même mouvement en utilisant uniquement le lever des doigts, ce qui est plus technique. </p>
+<br />
+
+<p>
+    Ne pas évoquer ici les ¤modes de jeu des différents instruments percussifs, alors que c'est un chapitre
+    dédié au rythme, est une profonde lacune de cette théorie. Je n'ai jamais pratiqué d'instrument à 
+    percussion, et je préfère donc laisser la parole à ceux qui savent, plutôt que tenter de les décrire sans 
+    les connaître en profondeur. Les percussions permettent une infinité de ¤modes de jeu, et c'est d'ailleurs
+    le cœur de la pratique de ces instruments. Les boîtes à rythme sont une abstraction des percussions 
+    acoustiques, mais n'en restent pas moins utilisées de manière similaire : en connaissant mieux la manière 
+    dont un percussionniste joue, on peut améliorer finement le groove d'un beat. C'est un domaine où j'ai 
+    encore beaucoup à apprendre moi-même, donc je m'arrête ici.</p>

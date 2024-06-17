@@ -1,0 +1,121 @@
+﻿@{
+    Layout = null;
+}
+
+<h1 class="display-4 text-center">Le ¤cycle des ¤quintes</h1>
+
+
+
+<p>Ceux qui me connaissent m'ont entendu en parler mille fois. C'est que le cycle des quintes est une constante de mon style : je l'utilise à tort et à travers, 
+    notamment pour faire évoluer un morceau par transpositions successives. Je n'ai cela dit rien inventé, et le cycle des quintes est un des fondements de la théorie
+    musicale. Je l'ai juste fétichisé, en quelque sorte.</p>
+
+<p>On verra dans le chapitre suivant consacré à la musique tonale, c'est-à-dire grosso modo la musique qui utilise la transposition pour changer de gamme au cours d'un
+    morceau, que la <strong>transposition la plus simple, la plus évidente, est la transposition à la quinte supérieure</strong>, ou à la quarte inférieure (ce qui 
+    revient au même comme on le verra).</p>
+
+<p>La raison est que, pour transposer à la quinte supérieure, il n'y a qu'une note à altérer par rapport à la gamme précédente. Prenons par exemple une gamme de DO en 
+    mode de DO :</p>
+
+<img src="~/img/0304_transposition_cycle_des_quintes_1.png" />
+
+<p>La quinte est SOL. Si on veut transposer le morceau à la quinte, donc reconstruire le mode de DO à partir de la fondamentale SOL, on n'a qu'une note à altérer : le 
+    FA devient dièse.</p>
+
+<img src="~/img/0305_transposition_cycle_des_quintes_2.png" />
+
+<p>En se basant sur SOL et en dièsant le FA, on passe d'une gamme de DO à une gamme de SOL. On a changé de gamme.</p>
+
+<p>Passer à la quarte inférieure revient au même car la note une quarte sous DO est aussi SOL :</p>
+
+<img src="~/img/0306_transposition_cycle_des_quintes_3.png" />
+
+<p>Quel que soit le mode choisi au départ, ce sera la même chose. Il n'y aura toujours qu'une note à altérer pour passer à la quinte supérieure ou à la quarte 
+    inférieure. Cette note dépendra des intervalles du mode, et donc des ajustements à faire quand on construira la nouvelle gamme, comme vu plus tôt dans ce chapitre.</p>
+
+<p>On peut continuer ainsi à l'infini. La quinte de SOL est RE. Si on veut transposer de SOL à RE dans notre exemple, on va dièser une nouvelle note : le DO.</p>
+
+<img src="~/img/0307_transposition_cycle_des_quintes_4.png" />
+
+<p>Au fil de notre navigation dans le cycle des quintes, on ajoute à chaque étape un nouveau dièse : </p>
+
+<ul>
+    <li>DO</li>
+    <li>SOL : le FA devient dièse</li>
+    <li>RE : le DO devient dièse</li>
+    <li>LA: le SOL devient dièse</li>
+    <li>etc.</li>
+</ul>
+
+<p>Il n'existe en tout et pour tout que 12 notes. Au bout de 12 transpositions, le cycle est terminé : on est revenu à la gamme de départ.</p>
+
+<img src="~/img/0308_transposition_cycle_des_quintes_5.png" />
+
+<p>Sur un pianoroll, les choses sont beaucoup plus simples que sur une partition. Concrètement, passer un passage de morceau à la quinte équivaut simplement à le 
+    décaler de 7 demi-tons au-dessus. Passer le même passage à la quarte inférieure revient à le décaler de 5 demi-tons en dessous. On peut le faire à la main dans 
+    l'éditeur, simplement en sélectionnant le passage voulu et en le déplaçant case par case, 7 fois en haut ou 5 fois en bas. On peut aussi utiliser les outils fournis 
+    par le DAW pour faire ça automatiquement, comme on l'a vu dans la partie précédente.</p>
+
+<p>A noter tout de même que l'inconvénient de passer par des transpositions automatiques est que les notes visibles sur le pianoroll ne correspondent plus aux notes 
+    réelles sur un clavier. Ca peut être frustrant quand, après la transposition, on veut rajouter une nouvelle piste : on risque de s'emmêler entre notes réelles et 
+    notes transposées, et donc de ne pas avoir le résultat voulu. C'est aussi dommage pour le travail de l'oreille, car on entend des notes qui ne sont pas celles 
+    écrites, et donc on mémorise des fausses informations. Par exemple, si l'introduction d'un morceau perso est DO-RE-MI, mais transposé à la quinte de manière 
+    automatique, les notes réelles entendues seront SOL-LA-SI. Imaginons qu'on récupère le MIDI de cette introduction pour un autre morceau parce qu'on l'aime bien, on 
+    va cette fois entendre DO-RE-MI car il n'y aura plus la transposition automatique. Il faut se rappeler des transpositions automatiques qu'on a faites, ce qui est 
+    laborieux. De préférence, je trouve qu'il est mieux de tout faire à la main pour que les notes écrites soient toujours les notes entendues. Et, encore une fois, ça 
+    favorise le long travail de l'oreille qui fait qu'après des années de pratique, vous pourrez entendre les notes dans votre tête simplement en les voyant, ou 
+    avant même de les écrire.</p>
+
+<p>Si on prend le cycle des quintes dans l'autre sens, on va devoir ajouter des bémols plutôt que des dièses. Par exemple, si on part toujours de DO en mode de DO, la 
+    gamme précédente sur le cycle est FA (car DO est la quinte de FA). Pour passer de DO à FA, en mode de DO, on doit passer le SI en bémol :</p>
+
+<img src="~/img/0309_transposition_cycle_des_quintes_6.png" />
+
+<p>Et ce sera comme précédemment au long du cycle, on va ajouter chaque fois un nouveau bémol : </p>
+
+<ul>
+    <li>DO</li>
+    <li>FA: le SI devient bémol</li>
+    <li>SI bémol : le MI devient bémol</li>
+    <li>MI bémol : le LA devient bémol</li>
+    <li>etc.</li>
+</ul>
+
+<p>Si on refait le cycle des quintes, cette fois-ci en sens inverse, on a :</p>
+
+<img src="~/img/0310_transposition_cycle_des_quintes_7.png" />
+
+<p>A mes oreilles, faire le chemin inverse du cycle des quintes est moins intéressant sur le long terme. C'est idéal pour une ou deux transpositions, mais si on 
+    continue, ça devient lourd. Cela dit, ce ne sera peut-être pas votre perception à vous, donc je vous invite à essayer pour voir comment ça sonne.</p>
+
+<p>On va donc terminer cette partie en revenant sur mon fétiche à moi : utiliser le cycle des quintes comme structure harmonique fondamentale. Le principe est 
+    très simple : au fil du morceau, on voyage au fil du cycle des quintes en transposant toujours à la quinte supérieure. Le voyage est potentiellement infini 
+    puisque c'est un cycle perpetuel. Ecoutons un pattern répété et qui, toutes les 4 répétitions, est transposé à la quinte supérieure. Il suit donc le 1er cycle 
+    représenté plus haut.
+</p>
+
+<audio controls>
+    <source src="~/audio/0273_transposition_cycle_des_quintes_1.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0273_transposition_cycle_des_quintes_1.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Ici, le cas est un peu extrême, car le rythme de transposition est très serré. C'est plus intéressant de prendre le temps de développer chaque nouvelle gamme 
+    comme un nouvel épisode d'un morceau. On ne passe à la quinte supérieure que quand on a envie d'aller de l'avant, de mener le morceau à une nouvelle étape. 
+    En tout cas, on a voyagé dans le cycle des quintes au complet, jusqu'au retour à la gamme du début. La magie du cycle est que même si on est revenu à la gamme 
+de départ, on ne s'en rend même pas compte : on a la sensation de toujours avancer plus loin. On peut continuer comme ça à l'infini.</p>
+
+<p>Et maintenant, le même motif qui, toutes les 4 répétitions, est transposé à la quinte inférieure. Il suit donc le 2ème cycle représenté plus haut.</p>
+
+<audio controls>
+    <source src="~/audio/0274_transposition_cycle_des_quintes_2.mp3" type="audio/mpeg">
+</audio>
+<div class="midi">
+    <a class="btn" href="~/midi/0274_transposition_cycle_des_quintes_2.mid">Télécharger le MIDI</a>
+</div>
+
+<p>Qu'est-ce que vous en pensez ? Personnellement, j'ai du mal à utiliser ce sens inverse. Je trouve que l'effet est très pesant, beaucoup moins euphorisant. On 
+    a comme la sensation de toujours aller vers plus de conclusion. Mais si ça vous donne des idées, n'hésitez pas.</p>
+
+<p>Dernière petite chose : cette boucle est en 7/8. Voyez comme ça peut sonner naturellement.</p>

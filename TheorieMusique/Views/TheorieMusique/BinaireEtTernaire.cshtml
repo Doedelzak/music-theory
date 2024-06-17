@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<h1 class="display-4 text-center">¤Binaire et ¤ternaire</h1>
+
+<p>Jusqu'ici, on n'a fait que diviser par deux. On peut en fait diviser par autant qu'on veut : c'est ce 
+    qu'on verra dans la partie sur les n-olets. Mais on distingue deux grandes catégories de divisions : 
+    <strong>binaire et ternaire</strong>.</p>
+
+<ul>
+
+    <li>Un rythme est <strong>binaire</strong> quand sa pulsation se divise en deux.</li>
+
+    <li>Un rythme est <strong>ternaire</strong> quand sa pulsation (<strong>et seulement sa pulsation</strong>) 
+        se divise en trois.</li>
+
+</ul>
+
+<p>Jusqu'ici, ce n'est pas trop compliqué. Le problème, c'est que l'échelle qu'on a vu dans la partie 
+    précédente n'a pas été pensée pour gérer le cas du rythme ternaire. Du coup, on se retrouve à faire du 
+    bricolage. Et comme ce bricolage s'est confirmé par des siècles de pratique, ça ne changera pas de sitôt.</p>
+
+<p>Le bricolage, c'est de se dire : quand c'est ternaire, je n'ai qu'à utiliser des subdivisions par trois. 
+    Par exemple, je vais utiliser des groupes de trois croches(8), et considérer que chaque groupe de trois 
+    croches forme une pulsation. On obtient donc notre pulsation divisable en trois.</p>
+
+<p>Mais si une pulsation = trois croches(8), quelle valeur a la pulsation ? Une noire(4) et demi ? C'est 
+    bien cette solution qui a été retenue... Dans ce cas, on parle de noire pointée (4.) Une noire pointée 
+    contient trois croches(8), donc l'équivalent d'une noire et demi. Toutes les divisions peuvent être 
+    pointées de cette manière. Le point veut tout bêtement dire "et demi". Une blanche pointée(2.) = une 
+    blanche(2) et demi, une croche pointée(8.) = une croche(8) et demi, etc.</p>
+
+<p>Pourquoi toute cette complexité ? Pourquoi n'a-t-on pas décidé, par exemple, qu'en ternaire une noire(8) 
+    valait trois croches(8) ? Il suffirait alors de préciser qu'un morceau est ternaire, et voilà.</p>
+
+<p>Le problème est que <strong>cette division ternaire intervient uniquement pour la pulsation</strong>. 
+    Toutes les sous-divisions seront en fait binaires. On a vu qu'avec une pulsation à la noire pointée(4.), 
+    la pulsation est divisée en trois croches(8). Mais ces croches(8) seront bien divisée en deux 
+    doubles-croches(16), et non en trois. La pulsation est divisée en trois, mais toutes les subdivisions 
+    restent divisées par deux.</p>
